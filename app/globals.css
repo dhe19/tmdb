@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.logo {
+  @apply text-[20px] md:text-[28px] font-bold  tracking-widest  text-transparent text-8xl bg-clip-text bg-gradient-to-br from-green-300 to-sky-500;
+}
+
+.logo-shape {
+  @apply ml-1 md:ml-2 inline-block w-14 h-4 md:h-5 rounded-xl bg-sky-500 bg-gradient-to-r from-green-300/60 to-sky-500 to-70%;
+}
+
+.square-language {
+  @apply border-[0.5px] border-white text-[14px] font-semibold px-1 py-[2px] transition-all cursor-pointer rounded-sm hover:bg-white hover:text-[rgb(3,37,65)];
+}
+
+.progress {
+  @apply w-14 h-14 rounded-full text-white bg-gradient-to-r from-transparent to-blue-500 to-50% border-4 border-slate-700;
+}
+
+.progress::before {
+  content: "";
+  display: block;
+  height: 100%;
+  margin-left: 50%;
+  transform-origin: left;
+  border-radius: 0 100% 100% 0/50%;
+}
+
+.progress::after {
+  content: "";
+  @apply absolute inset-2 bg-slate-700 rounded-[50%];
+}
+
+.progress::before {
+  @apply bg-blue-500;
+  /*   transform: rotate(calc(((80) - 50) * 0.01turn));
+ */
+}
+
+.movies-list {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-6;
+}
