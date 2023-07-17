@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 interface Props {
   title: string;
@@ -5,10 +6,10 @@ interface Props {
 const Logo: React.FC<Props> = ({ title }) => {
   return (
     <div className="flex items-center">
-      <a href="" className="logo">
+      <Link href="/" className="logo">
         {title}
         <span className="logo-shape"></span>
-      </a>
+      </Link>
     </div>
   );
 };

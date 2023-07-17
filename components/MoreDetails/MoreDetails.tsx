@@ -10,6 +10,7 @@ interface Props extends StylingProps {
   revenue?: string;
   keywords?: Array<string>;
   homepage?: string;
+  budget?: string;
 }
 const MoreDetails: React.FC<Props> = ({
   className,
@@ -19,6 +20,7 @@ const MoreDetails: React.FC<Props> = ({
   revenue,
   keywords,
   homepage,
+  budget,
 }) => {
   return (
     <div className={className}>
@@ -27,6 +29,7 @@ const MoreDetails: React.FC<Props> = ({
         status={status}
         originalLanguage={originalLanguage}
         revenue={revenue}
+        budget={budget}
       />
       <Keywords keywords={keywords} />
     </div>

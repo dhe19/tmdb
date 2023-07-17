@@ -16,7 +16,7 @@ const CastCard: React.FC<Props> = ({ name, image, character }) => {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="px-2 pt-4">
+      <div className="px-2 py-4">
         <p className="text-sm font-semibold">{name}</p>
         <p className="text-sm font-light">{character}</p>
       </div>

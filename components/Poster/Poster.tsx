@@ -47,7 +47,7 @@ const Poster: React.FC<Props> = ({ movie, credist }) => {
             genres={genres}
             releaseDate={releaseDate}
           />
-          <ActionsMenu />
+          <ActionsMenu rate={rate} />
           <h3 className="px-4 text-lg lg:text-xl italic font-light my-5">
             {tagline}
           </h3>

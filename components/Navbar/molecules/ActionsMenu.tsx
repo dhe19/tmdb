@@ -4,7 +4,7 @@ import { Search } from "@styled-icons/material";
 const ActionsMenu = () => {
   return (
     <div className="hidden md:flex   items-center gap-6">
-      <Plus className="w-5 h-5 cursor-pointer" />
+      <Plus className="hidden w-5 h-5 cursor-pointer" />
       <span className="square-language ">EN</span>
       <span>Login</span>
       <span>Join TMDB</span>

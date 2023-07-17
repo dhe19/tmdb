@@ -1,3 +1,4 @@
+import Rate from "@/components/Rate";
 import {
   Bookmark,
   Heart,
@@ -7,10 +8,22 @@ import {
 } from "@styled-icons/foundation";
 import React from "react";
 
-const ActionsMenu = () => {
+interface Props {
+  rate: number;
+}
+
+const ActionsMenu: React.FC<Props> = ({ rate }) => {
   return (
     <ul className="flex justify-center lg:justify-start gap-5 mt-10">
-      <li>{/* rate */}</li>
+      <li className="flex items-center gap-2 lg:gap-3">
+        <Rate
+          rate={Math.floor(rate * 10).toString()}
+          className=" lg:scale-125 md:inline-block "
+        />
+        <span className="font-semibold pr-6 lg:p-0 border-r border-slate-300 lg:border-none">
+          User <br className="hidden lg:block " /> Score
+        </span>
+      </li>
       <li className="poster-actions">
         <ListThumbnails className="h-4 w-4  " />
       </li>

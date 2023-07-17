@@ -1,6 +1,6 @@
 import { options, urlImage } from "@/utils/constants";
 import React from "react";
-import Rate from "./Rate";
+import Rate from "../../Rate";
 import Link from "next/link";
 
 interface Props {
@@ -17,9 +17,13 @@ const MovieCard: React.FC<Props> = ({ movie }) => {
           <img
             src={`${urlImage}${imgPath}`}
             className="h-[100%] w-[100%] object-cover"
+            alt={title}
           />
         </Link>
-        <Rate />
+        <Rate
+          rate={Math.floor(rate * 10).toString()}
+          className="absolute left-3 -bottom-4 hidden md:inline-block"
+        />
       </div>
       <div className="px-3 py-4 flex flex-col ">
         <Link href={`/movies/${id}`} className="font-semibold block ">

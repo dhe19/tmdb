@@ -15,7 +15,8 @@ const useFetchMovies = (url:string): Movie[] | null => {
             genres: movie.genre_ids,
             rate: movie.vote_average,
             imgPath: movie.poster_path,
-          }));
+            id: movie.id,
+          }) as Movie);
   
           setMovies(movieData);
         } catch (error) {
