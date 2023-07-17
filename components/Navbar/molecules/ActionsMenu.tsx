@@ -1,6 +1,6 @@
 import React from "react";
 import { Plus } from "@styled-icons/foundation";
-import { Search, Menu } from "@styled-icons/material";
+import { Search } from "@styled-icons/material";
 const ActionsMenu = () => {
   return (
     <div className="hidden md:flex   items-center gap-6">
