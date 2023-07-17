@@ -12,7 +12,7 @@ const useFetchMovie = (url:string): FullMovie | null => {
         setMovie({
           title: data.title,
           releaseDate: data.release_date,
-          genres: data.genre_ids,
+          genres: data.genres.map((e:any) => e.name),
           rate: data.vote_average,
           imgPath: data.poster_path,
           backdropPath: data.backdrop_path,
@@ -23,6 +23,7 @@ const useFetchMovie = (url:string): FullMovie | null => {
           revenue:data.revenue,
           originalLanguage: data.original_language,
           homepage: data.homepage,
+          runtime:data.runtime,
         });
        
         } catch (error) {
