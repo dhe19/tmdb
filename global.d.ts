@@ -6,7 +6,7 @@ interface StylingProps {
 interface Movie {
     title: string;
     releaseDate: string;
-    genres: number[];
+    genres: Array<string>;
     rate: number;
     imgPath: string;
 
@@ -22,6 +22,7 @@ interface FullMovie extends Movie{
     revenue:number;
     originalLanguage:string;
     homepage:string;
+    runtime:number;
 }
 //https://developer.themoviedb.org/reference/movie-external-ids
 interface MovieSocialMedia {
@@ -35,4 +36,11 @@ interface MovieKeyword{
     keywords:Array<String>;
 }
 
+
+interface Cast{
+    name:string;
+    imageProfile:string;
+    character:string;
+    knownForDepartment:string;
+}
 
