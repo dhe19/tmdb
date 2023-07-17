@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .logo {
-  @apply text-[20px] md:text-[28px] font-bold  tracking-widest  text-transparent text-8xl bg-clip-text bg-gradient-to-br from-green-300 to-sky-500;
+  @apply text-[20px] md:text-[28px] font-bold  tracking-widest  text-transparent  bg-clip-text bg-gradient-to-br from-green-300 to-sky-500;
 }
 
 .logo-shape {
@@ -40,4 +40,13 @@
 
 .movies-list {
   @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-6;
+}
+
+.scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar::-webkit-scrollbar {
+  display: none;
 }
