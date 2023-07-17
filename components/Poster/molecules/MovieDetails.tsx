@@ -7,7 +7,7 @@ interface Props {
 }
 const MovieDetails: React.FC<Props> = ({ releaseDate, genres, runtime }) => {
   return (
-    <ul className="flex gap-5 mb-5">
+    <ul className="flex flex-wrap gap-x-6 gap-y-1 justify-center lg:justify-start items-center bg-slate-700/40 lg:bg-transparent py-2 px-2 mb-5 border-y border-slate-600 lg:border-none ">
       <li className=" px-[4px] border-[0.5px] border-slate-500">PG - 13</li>
       <li>
         {new Date(releaseDate).toLocaleDateString("en-US", {
@@ -16,8 +16,10 @@ const MovieDetails: React.FC<Props> = ({ releaseDate, genres, runtime }) => {
           year: "numeric",
         })}
       </li>
-      <li>{genres.map((e) => e).join(", ")}</li>
-      <li>{numbersToMinuts(runtime)}</li>
+      <li className="list-none lg:list-disc">
+        {genres.map((e) => e).join(", ")}
+      </li>
+      <li className="list-none lg:list-disc">{numbersToMinuts(runtime)}</li>
     </ul>
   );
 };

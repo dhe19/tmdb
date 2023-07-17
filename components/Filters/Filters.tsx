@@ -9,6 +9,9 @@ const Filters: React.FC<StylingProps> = ({ className }) => {
         <Filter title="Sort" />
         <Filter title="Where to Watch" />
         <Filter title="Filters" />
+        <button className="bg-gray-200 rounded-3xl py-3 font-semibold">
+          Search
+        </button>
       </div>
     </div>
   );

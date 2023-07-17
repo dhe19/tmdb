@@ -53,7 +53,7 @@ const MovieDetails: React.FC<Props> = ({ params }) => {
       .then((res) => res.json())
       .then((data) =>
         setKeywords({
-          keywords: data.keywords.map((e: any) => e.name) as Array<String>,
+          keywords: data.keywords.map((e: any) => e.name) as Array<string>,
         })
       );
   }, []);
@@ -77,7 +77,7 @@ const MovieDetails: React.FC<Props> = ({ params }) => {
       )}
 
       <div className="grid grid-cols-1 lg:grid-cols-10 mb-12 pt-7 px-5">
-        {cast && <Cast cast={cast} className="col-span-8 px-2 md:px-6" />}
+        {cast && <Cast cast={cast} className="col-span-8 lg:px-6" />}
         <MoreDetails
           originalLanguage={movie?.originalLanguage}
           status={movie?.status}
@@ -85,7 +85,7 @@ const MovieDetails: React.FC<Props> = ({ params }) => {
           links={social as MovieSocialMedia}
           keywords={keywords?.keywords}
           homepage={movie?.homepage}
-          className="col-span-2 px-5 "
+          className="col-span-2"
         />
       </div>
     </div>

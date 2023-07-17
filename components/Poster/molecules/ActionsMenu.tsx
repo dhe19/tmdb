@@ -9,7 +9,7 @@ import React from "react";
 
 const ActionsMenu = () => {
   return (
-    <ul className="flex gap-5 mt-10">
+    <ul className="flex justify-center lg:justify-start gap-5 mt-10">
       <li>{/* rate */}</li>
       <li className="poster-actions">
         <ListThumbnails className="h-4 w-4  " />

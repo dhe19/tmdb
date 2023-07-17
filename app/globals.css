@@ -39,7 +39,11 @@
 }
 
 .movies-list {
-  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-6;
+  @apply px-3 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-6;
+}
+
+.poster-actions {
+  @apply rounded-full bg-[rgb(3,37,65)] transition-all cursor-pointer hover:bg-green-500 w-12 h-12  items-center justify-center hidden lg:flex;
 }
 
 .scrollbar {

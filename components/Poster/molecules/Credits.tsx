@@ -5,7 +5,7 @@ interface Props {
 }
 const Credits: React.FC<Props> = ({ credist }) => {
   return (
-    <ul className="grid grid-cols-3 gap-3 items-center mt-8">
+    <ul className="text-center lg:text-start p-4 gap-y-5  grid grid-cols-2 lg:grid-cols-3 gap-3 items-center mt-8">
       {credist?.map((e) => (
         <li className="flex flex-col">
           <span className="font-medium text-sm">{e?.name ?? "-"}</span>
