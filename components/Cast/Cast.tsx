@@ -1,5 +1,6 @@
 import React from "react";
 import CastCard from "./CastCard";
+import { ArrowRight } from "@styled-icons/foundation";
 
 interface Props extends StylingProps {
   cast: Array<Cast>;
@@ -22,7 +23,9 @@ const Cast: React.FC<Props> = ({ cast, className }) => {
           }
         })}
         <div className="flex items-center justify-center text-2xl font-semibold ">
-          <p className="w-40 cursor-pointer">View More</p>
+          <p className="w-40 cursor-pointer">
+            View More <ArrowRight className="h-6 w-6" />
+          </p>
         </div>
       </div>
     </div>
